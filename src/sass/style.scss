@@ -608,6 +608,13 @@ body {
     }
 
     @media only screen and (max-width: $breakpoint-tablet) {
+      .nav-menu {
+        a {
+            padding: 1.5em 1.2em !important;
+            color: red;
+        }
+      }
+
       .nav-social {
         display: none;
       }
@@ -826,8 +833,6 @@ body {
 
   .menu-list-social {
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     width: auto;
     padding-top: 1.1em;
     display: none;
@@ -853,6 +858,14 @@ body {
   @media only screen and (max-width: $breakpoint-tablet) {
     .menu-list-social {
       display: block;
+
+      a {
+        padding: 1em 1em !important;
+
+        i {
+          margin-left: -0.5em !important;
+        }
+      }
     }
   }
 }
@@ -1157,12 +1170,12 @@ body {
       float: left;
       text-align: left;
 
-      .fa {
+      .fa, .fab, .fas, {
         color: $color-gray-50;
       }
 
       a {
-        .fa {
+        .fa, .fab, .fas, {
           color: $color-gray-65;
         }
       }

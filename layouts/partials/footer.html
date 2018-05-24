@@ -2,8 +2,7 @@
                 <footer id="footer">
                     <section class="credits">
                         {{ if .Site.Params.license }}
-                        <span class="credits-license"><i class="fa
-                                fa-copyright"></i> 2013-{{ now.Year }} {{ .Site.Title }}, licencia {{ htmlUnescape .Site.Params.license | safeHTML }}
+                        <span class="credits-license"><i class="fas fa-copyright"></i> 2013-{{ now.Year }} {{ .Site.Title }}, licencia {{ htmlUnescape .Site.Params.license | safeHTML }}
                         {{ end }}
                         {{ if .Site.Params.cookiesNoticePage }}
                         — <a href="{{ .Site.Params.cookiesNoticePage }}">Política de cookies</a>
