@@ -31,7 +31,7 @@
 
         <title>{{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}</title>
 
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+        <script defer src="//use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
 
         <link rel="preload" href="/js/main.js" as="script" />
         <link rel="preload" href="/css/main.css" as="style" />
@@ -186,11 +186,20 @@
             <div id="main-menu" class="nav-menu">
               {{ if .Site.Menus.subscription }}
                 <a class="menu subscription" data-action="subscription"
-                    data-target="subscription" title="Suscríbete al Podcast">Suscríbete</a>
+                   data-target="subscription" title="Suscríbete al Podcast">Suscríbete</a>
               {{ end }}
-              <a class="nav-social" target="_blank" href="https://twitter.com/{{ .Site.Params.twitter }}" title="Entre Dev y Ops en Twitter"><i class="fab fa-twitter"></i></a>
-              <a class="nav-social" target="_blank" href="https://t.me/{{ .Site.Params.telegram }}" title="Entre Dev y Ops en Telegram"><i class="fab fa-telegram-plane"></i></a>
-              <a class="nav-social" target="_blank" href="https://github.com/{{ .Site.Params.github }}" title="Entre Dev y Ops en GitHub"><i class="fab fa-github"></i></a>
+              {{ if .Site.Params.twitter }}
+                  <a class="nav-social" target="_blank" href="https://twitter.com/{{ .Site.Params.twitter }}"
+                     title="{{ .Site.Title }} en Twitter"><i class="fab fa-twitter"></i></a>
+              {{ end }}
+              {{ if .Site.Params.telegram }}
+                  <a class="nav-social" target="_blank" href="https://t.me/{{ .Site.Params.telegram }}"
+                     title="{{ .Site.Title }} en Telegram"><i class="fab fa-telegram-plane"></i></a>
+              {{ end }}
+              {{ if .Site.Params.github }}
+                  <a class="nav-social" target="_blank" href="https://github.com/{{ .Site.Params.github }}"
+                     title="{{ .Site.Title }} en GitHub"><i class="fab fa-github"></i></a>
+              {{ end }}
               <a id="search-button" onclick="$('#search-form').toggle();" title="Buscar"><i class="fas fa-search"></i></a>
               <form id="search-form" method="get" role="search" action="https://google.es/search">
                 <input type="hidden" name="as_sitesearch" value="{{ .Site.BaseURL }}">
