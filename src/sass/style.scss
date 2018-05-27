@@ -1606,7 +1606,6 @@ body {
       float: left;
       border-radius: 2px;
       color: #fff;
-      background: $color-gray-50;
 
       &:hover,
       &:focus {
@@ -1620,14 +1619,20 @@ body {
       span {
         display: none;
       }
-    }
 
-    .fa-twitter {
-      background-color: #3ea9dd !important;
-    }
+      .fa-twitter {
+        background-color: #3ea9dd !important;
+        padding: 8px;
+        width: 50%;
+        height: 50%;
+      }
 
-    .fa-linkedin {
-      background-color: #006fa6 !important;
+      .fa-linkedin-in {
+        background-color: #006fa6 !important;
+        padding: 8px;
+        width: 50%;
+        height: 50%;
+      }
     }
   }
 }
