@@ -37,11 +37,13 @@
                   </div>
                 {{ if ne .Type "page" }}
                     <div class="post-share">
-                        <a class="fas fa-twitter" href="https://twitter.com/share?text={{ .Title }}&url={{ .Permalink }}" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                            <span>Twitter</span>
+                        <a href="https://twitter.com/share?text={{ .Title }}&url={{ .Permalink }}"
+                           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                            <i class="fab fa-twitter"/></i><span>Twitter</span>
                         </a>
-                        <a class="fas fa-linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Summary }}" onclick="window.open(this.href, 'linkedin-share', 'width=550,height=550');return false;">
-                            <span>LinkedIn</span>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ .Permalink }}&title={{ .Title }}&summary={{ .Summary | plainify }}"
+                           onclick="window.open(this.href, 'linkedin-share', 'width=550,height=550');return false;">
+                            <i class="fab fa-linkedin-in"/></i><span>LinkedIn</span>
                         </a>
                     </div>
             {{ end }}
