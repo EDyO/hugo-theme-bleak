@@ -14,10 +14,6 @@
         </li>
         {{ end }}
         <li class="menu-list-item menu-list-social">
-            {{ if .Site.Menus.subscription }}
-              <a class="menu subscription" data-action="subscription"
-                 data-target="subscription" title="Suscríbete al Podcast">Suscríbete</a>
-            {{ end }}
             {{ if .Site.Params.twitter }}
                 <a class="nav-social" target="_blank" href="https://twitter.com/{{ .Site.Params.twitter }}"
                    title="{{ .Site.Title }} en Twitter"><i class="fab fa-twitter"></i></a>
