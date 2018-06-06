@@ -624,12 +624,6 @@ body {
     .rss {}
 
     .menu {}
-
-    .subscription {
-      font-weight: bold;
-      font-size: 1em;
-      width: auto;
-    }
   }
 }
 
@@ -641,7 +635,7 @@ body {
   }
 }
 
-#menu, #tocMenu, #subscription {
+#menu, #tocMenu {
   display: none;
   position: fixed;
   left: 50%;
