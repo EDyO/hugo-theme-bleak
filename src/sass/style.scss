@@ -624,12 +624,6 @@ body {
     .rss {}
 
     .menu {}
-
-    .subscription {
-      font-weight: bold;
-      font-size: 1em;
-      width: auto;
-    }
   }
 }
 
@@ -641,7 +635,7 @@ body {
   }
 }
 
-#menu, #tocMenu, #subscription {
+#menu, #tocMenu {
   display: none;
   position: fixed;
   left: 50%;
@@ -1127,6 +1121,20 @@ body {
         bottom: 0;
       border-bottom: 4px solid $color-primary-default;
      }
+  }
+
+  #front-page-menu {
+    z-index: 50;
+    text-align: center;
+    margin-top: 40px;
+
+    .menu-list-item {
+      display: inline;
+      background-color: white;
+      border-radius: 4em;
+      padding: 0.80em 1.25em;
+      margin: 0 1em;
+    }
   }
 }
 
