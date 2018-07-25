@@ -1119,7 +1119,7 @@ body {
         width: 100%;
         left: 0;
         bottom: 0;
-      border-bottom: 4px solid $color-primary-default;
+        border-bottom: 4px solid $color-primary-default;
      }
   }
 
@@ -1134,6 +1134,11 @@ body {
       border-radius: 4em;
       padding: 0.80em 1.25em;
       margin: 0 1em;
+
+      &:hover,
+      &:focus {
+        color: $color-gray-15;
+      }
     }
   }
 }
@@ -2021,8 +2026,11 @@ body {
       font-size: 1.5em;
       margin: 0px 6px;
       border-bottom: none;
-      fab, fas {
-        color: white;
+      color: white;
+
+      &:hover,
+      &:focus {
+        color: $color-gray-15;
       }
     }
 
