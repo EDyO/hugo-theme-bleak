@@ -2020,13 +2020,16 @@ body {
       width: 250px;
       left: 0;
       top: 245px;
+
+      a {
+        color: white;
+      }
     }
 
     a {
       font-size: 1.5em;
       margin: 0px 6px;
       border-bottom: none;
-      color: white;
 
       &:hover,
       &:focus {
