@@ -25,6 +25,7 @@
         {{ end }}
         <meta name="twitter:description" content="{{ .Summary }}" />
         <meta name="twitter:url" content="{{ .Permalink }}" />
+        <meta name="telegram:channel" content="@{{ .Site.Params.telegram }}" />
     {{ else }}
         <meta property="og:type" content="website" />
     {{ end }}
