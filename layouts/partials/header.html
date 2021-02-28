@@ -6,7 +6,7 @@
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-        <meta property="og:title" content="{{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}" />
+        <meta property="og:title" content="{{ if ne .Permalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
         <meta property="og:site_name" content="{{ .Site.Title }}" />
         <meta property="og:url" content="{{ .Permalink }}" />
 
@@ -30,7 +30,7 @@
         <meta property="og:type" content="website" />
     {{ end }}
 
-        <title>{{ if ne .URL "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}</title>
+        <title>{{ if ne .Permalink "/" }} {{ .Title }} &middot; {{ end }} {{ .Site.Title }}</title>
 
         <script defer src="//use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
         <script defer src="//use.fontawesome.com/releases/v5.0.13/js/brands.js" integrity="sha384-G/XjSSGjG98ANkPn82CYar6ZFqo7iCeZwVZIbNWhAmvCF2l+9b5S21K4udM7TGNu" crossorigin="anonymous"></script>
@@ -66,12 +66,12 @@
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-    {{ if ne .URL "/" }}
+    {{ if ne .Permalink "/" }}
         <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
     {{ end }}
 
     {{if .IsNode}}
-        <link href="{{.RSSLink}}" rel="alternate" type="application/rss+xml" title="{{ if ne .URL "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
+        <link href="{{ with .OutputFormats.Get "RSS" }}{{ .RelPermalink }}{{ end }}" rel="alternate" type="application/rss+xml" title="{{ if ne .Permalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
     {{end}}
         <link rel="canonical" href="{{ .Permalink }}" />
 
